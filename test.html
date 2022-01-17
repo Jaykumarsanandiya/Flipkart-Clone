@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img name="slide"  >
+    <script>
+        var i=0 ;
+        var time=3000;
+        var image=[];
+        image[0]= "image/photo1.jpg";
+        image[1]= "image/photo2.jpg";
+        image[2]= "image/photo3.jpg";
+
+        function changePhoto(){
+
+            document.slide.src=image[i];
+
+                if(i < image.length -1){
+                    i++;
+                }else{
+                    i=0;
+                }
+        }
+          
+           setInterval("changePhoto()",time);
+    </script>
+</body>
+</html>

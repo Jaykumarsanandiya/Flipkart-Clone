@@ -13,35 +13,185 @@
 
     <header>
         <nav>
-           <div class="logo">
-               <img src="image/logo.png">
-           </div>
+            <div class="bigmenu">
+                <div class="logo">
+                    <img src="image/logo.png">
+                </div>
 
-           <div class="search">
-                 <input type="text" placeholder="Search for products , brands and More">
-                 <button class="btn"  >Search</button>
-           </div>
-           
-            <ul>
-                <li>Login</li>
-                <li>More</li>
-                <li>Cart</li>
-            </ul>
+                <div class="search">
+                    <input type="text" placeholder="Search for products , brands and More">
+                    <button class="btn">Search</button>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>Login</li>
+                        <li>More</li>
+                        <li>Cart</li>
+                    </ul>
+                </div>
+            </div>
+
+
         </nav>
 
 
     </header>
-<main>
-    <div class="container">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
+
+    <div class="cardCategory">
+        <div class="smallCard">
+            <img src="image/mobile.png" alt="category">
+            <a href=""> Mobile</a>
+        </div>
+        <div class="smallCard">
+            <img src="image/fashion.png" alt="category">
+            <a href=""> Fashion</a>
+        </div>
+        <div class="smallCard">
+            <img src="image/furniture.png" alt="category">
+            <a href=""> Furniture</a>
+        </div>
+        <div class="smallCard">
+            <img src="image/grocery.png" alt="category">
+            <a href=""> Grocery</a>
+        </div>
+        <div class="smallCard">
+            <img src="image/travel.png" alt="category">
+            <a href=""> Travel</a>
+        </div>
+
+
     </div>
-</main>
+
+    <div class="container">
+        <img name="slide">
+
+    </div>
+
+    <main>
+        <div class="container">
+
+            <div class="card">
+                <div class="starting">
+                    <h2> Top Deals</h2>
+                    <h3> In Winter special</h3>
+                    <button>View Items</button>
+                </div>
+                <div class="atom"><img src="image/bag.jpeg" alt="atom">
+                    <p style="font-weight: bold;">Heading</p>
+                    <p style="color:#388e3c;">from 5000 Rs</p>
+
+                </div>
+                <div class="atom"><img src="image/tshirt.jpeg" alt="atom">
+                    <p style="font-weight: bold;">Heading</p>
+                    <p style="color:#388e3c;">from 5000 Rs</p>
+
+                </div>
+                <div class="atom"><img src="image/women.jpeg" alt="atom">
+                    <p style="font-weight: bold;">Heading</p>
+                    <p style="color:#388e3c;">from 5000 Rs</p>
+
+                </div>
+                <div class="atom"><img src="image/shoe2.jpeg" alt="atom">
+                    <p style="font-weight: bold;">Heading</p>
+                    <p style="color:#388e3c;">from 5000 Rs</p>
+
+                </div>
+
+
+            </div>
+
+            <div class="card">
+                <div class="starting">
+                    <h2> Top Deals</h2>
+                    <h3> In Latest Electronics</h3>
+                    <button>View Items</button>
+                </div>
+                <div class="atom"><img src="image/pc.jpeg" alt="atom">
+                    <p style="font-weight: bold;">Heading</p>
+                    <p style="color:#388e3c;">from 5000 Rs</p>
+
+                </div>
+                <div class="atom"><img src="image/camera.jpeg" alt="atom">
+                    <p style="font-weight: bold;">Heading</p>
+                    <p style="color:#388e3c;">from 5000 Rs</p>
+
+                </div>
+                <div class="atom"><img src="image/tablet.jpeg" alt="atom">
+                    <p style="font-weight: bold;">Heading</p>
+                    <p style="color:#388e3c;">from 5000 Rs</p>
+
+                </div>
+                <div class="atom"><img src="image/headphone.jpeg" alt="atom">
+                    <p style="font-weight: bold;">Heading</p>
+                    <p style="color:#388e3c;">from 5000 Rs</p>
+
+                </div>
+
+
+            </div>
+
+            <div class="card">
+                <div class="starting">
+                    <h2> Top Deals</h2>
+                    <h3> In Every-day Things</h3>
+                    <button>View Items</button>
+                </div>
+                <div class="atom"><img src="image/specs.jpg" alt="atom">
+                    <p style="font-weight: bold;">Heading</p>
+                    <p style="color:#388e3c;">from 5000 Rs</p>
+
+                </div>
+                <div class="atom"><img src="image/watch.jpeg" alt="atom">
+                    <p style="font-weight: bold;">Heading</p>
+                    <p style="color:#388e3c;">from 5000 Rs</p>
+
+                </div>
+                <div class="atom"><img src="image/torch.jpeg" alt="atom">
+                    <p style="font-weight: bold;">Heading</p>
+                    <p style="color:#388e3c;">from 5000 Rs</p>
+
+                </div>
+                <div class="atom"><img src="image/idli.jpeg" alt="atom">
+                    <p style="font-weight: bold;">Heading</p>
+                    <p style="color:#388e3c;">from 5000 Rs</p>
+
+                </div>
+
+
+            </div>
+        
+        
+
+        </div>
+    </main>
     <footer>
         <p>Copyright &copy; Jaykumar at Simform</p>
     </footer>
+
+
+
+    <script>
+        var i = 0;
+        var time = 3000;
+        var image = [];
+        image[0] = "image/photo1.jpg";
+        image[1] = "image/photo2.jpg";
+        image[2] = "image/photo3.jpg";
+
+        function changePhoto() {
+
+            document.slide.src = image[i];
+
+            if (i < image.length - 1) {
+                i++;
+            } else {
+                i = 0;
+            }
+        }
+
+        setInterval("changePhoto()", time);
+    </script>
+
 </body>
 
 </html>
