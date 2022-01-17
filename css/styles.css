@@ -38,9 +38,9 @@ nav{
   align-items: center;
 }
 .logo img{
-    width: 200px;
+    width: 71px;
     padding: 22px;
-    padding-left: 180px;
+    padding-left: 277px;
 }
 
 .search{
@@ -76,6 +76,26 @@ nav ul li{
 }
 nav ul li a{
     text-decoration: none;
+}
+
+.dropdown-content{
+    display: none;
+    box-shadow: 2px 2px 2px 2px gray;
+    background-color: white;
+    color: blue;
+    position: absolute;
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+  }
+
+.dropdown:hover .dropdown-content{
+    display: block;
 }
 /* category */
 
