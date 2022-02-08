@@ -1,33 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+<style> 
+
+
+
+header{
+    
+    background-color:#7108e9;
+    color: white;
+  
+   
+}
+.bigmenu{
+    display: flex;
+    
+    align-items: center;
+}
+nav{
+    display: flex;
+    height: 7vh;
+    justify-content: space-around;
+
+}
+.logo{
+  display: flex;
+  align-items: center;
+}
+.logo img{
+    width: 71px;
+    padding: 22px;
+    padding-left: 277px;
+}
+
+.search{
+     display: flex;
+     align-items: center;
+}
+
+input[type="text"]{
+    height: 35px;
+    width: 528px;
+    border-radius: 5px;
+} 
+.btn{
+    padding: 9px 8px;
+    margin: 0 0 0 16px;
+    color: white;
+    background-color: #2874f0;
+    border: white 2px solid;
+    font-weight: bold;
+    cursor: pointer;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-self: flex-end;
+
+}
+
+nav ul li{
+    padding: 0 30px;
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+}
+
+.dropdown-content{
+    display: none;
+    box-shadow: 2px 2px 2px 2px gray;
+    background-color: white;
+    color: blue;
+    position: absolute;
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+  }
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+
+
+
+
+#main {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #c3c3c3;
+  display: flex;
+}
+
+#main div {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100px;
+}
+
+#main div:nth-of-type(2) {
+  flex-shrink: 3;
+}
+</style>
 </head>
 <body>
-    <img name="slide"  >
-    <script>
-        var i=0 ;
-        var time=3000;
-        var image=[];
-        image[0]= "image/photo1.jpg";
-        image[1]= "image/photo2.jpg";
-        image[2]= "image/photo3.jpg";
 
-        function changePhoto(){
+<h1>The flex-shrink Property</h1>
 
-            document.slide.src=image[i];
 
-                if(i < image.length -1){
-                    i++;
-                }else{
-                    i=0;
-                }
-        }
-          
-           setInterval("changePhoto()",time);
-    </script>
+
+<header>
+    <nav>
+        <div class="bigmenu">
+            <div class="logo">
+                <img src="image/logo.png">
+            </div>
+
+            <div class="search">
+                <input type="text" placeholder="Search for products , brands and More">
+                <button class="btn">Search</button>
+            </div>
+            <div class="menu">
+                <ul>
+
+                  <div class="dropdown">
+
+                   <span><li>Login</li></span> 
+
+                    <div class="dropdown-content">
+                           <a href="" >My Profile </a>
+                           <a href="" >Orders</a>
+                           <a href="" >WIshlist </a>
+                           <a href="" > Rewards</a>
+                          
+                   </div>
+                    
+                    
+                    </div>  
+                    
+                  
+                  
+                    <div class="dropdown">
+
+                        <span><li>More</li></span> 
+ 
+                         <div class="dropdown-content">
+                                <a href="" >Notification </a>
+                                <a href="" >Sell on Flipkart</a>
+                                <a href="" >24*7 Customer Care </a>
+                               
+                               
+                        </div>
+                         
+                         
+                         </div>  
+                    <li>Cart</li>
+                </ul>
+            </div>
+        </div>
+
+
+    </nav>
+
+
+</header>
+
+<div id="main">
+  <div style="background-color:coral;"></div>
+  <div style="background-color:lightblue;"></div>
+  <div style="background-color:khaki;"></div>
+  <div style="background-color:pink;"></div>
+  <div style="background-color:lightgrey;"></div>
+</div>
+
+<p><b>Note:</b> Internet Explorer 10 and earlier versions do not support the flex-shrink property.</p>
+
 </body>
 </html>
